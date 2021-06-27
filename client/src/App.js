@@ -1,6 +1,7 @@
 import React from "react";
 import Add from "./Pages/Add";
 import Edit from "./Pages/Edit";
+import Home from "./Pages/Home";
 import NavigationBar from "./Layout/NavigationBar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
@@ -9,6 +10,9 @@ function App() {
       <Router>
         <NavigationBar />
         <Switch>
+          <Route path="/">
+            <Home />
+          </Route>
           <Route exact path="/add">
             <Add />
           </Route>
